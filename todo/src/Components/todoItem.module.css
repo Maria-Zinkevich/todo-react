@@ -1,0 +1,15 @@
+.list_item {
+    margin-bottom: .5em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.list_item > div {
+    width: 60%;
+}
+
+.btn_update {
+    margin-right: 10px;
+}

@@ -7,11 +7,11 @@ export const addTodo = async (todo) =>
     body: JSON.stringify({ todo }),
   });
 
-export const updateTodo = async (id, todo) => {
+export const updateTodo = async (id, todo, isDone) => {
   await fetch(`${URL}/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ todo }),
+    body: JSON.stringify({ todo, isDone }),
   });
 };
 
@@ -20,10 +20,8 @@ export const getTodos = async () => {
   return await response.json();
 };
 
-export const deleteTodo = async (id, todo) => {
+export const deleteTodo = async (id) => {
   await fetch(`${URL}/${id}`, {
     method: "DELETE",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ todo }),
   });
 };

@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { addTodo } from "../Requests";
+import styles from "./addItem.module.css";
+
+//Material-UI
+import { Button } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
+import { FormControl } from "@material-ui/core";
 
 export const AddItem = ({ updateDetector }) => {
   const [item, setItem] = useState("");
 
-  const handleAdd = async () => {
+  const handleAdd = async (e) => {
+    e.preventDefault();
     if (item !== "") {
       await addTodo(item);
       updateDetector();
@@ -12,14 +19,28 @@ export const AddItem = ({ updateDetector }) => {
     }
   };
 
-  const handleInput = (e) => {
-    setItem(e.target.value);
+  const handleInput = (event) => {
+    setItem(event.target.value);
   };
 
   return (
-    <div>
-      <input type="text" value={item} onChange={handleInput} />
-      <button onClick={handleAdd}>Add</button>
-    </div>
+    <form onSubmit={handleAdd} id="form" className={`${styles.form}`}>
+      <FormControl>
+        <TextField
+          label="What should be done?"
+          variant="outlined"
+          value={item}
+          onChange={handleInput}
+        />
+        <Button
+          type="submit"
+          onClick={handleAdd}
+          variant="contained"
+          color="primary"
+        >
+          Add
+        </Button>
+      </FormControl>
+    </form>
   );
 };
