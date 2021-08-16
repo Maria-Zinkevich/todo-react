@@ -1,20 +1,50 @@
 {
-  "list": [
+  "users": [
     {
-      "todo": "g",
+      "user": "m",
       "id": 1
     },
     {
-      "todo": "df",
+      "user": "n",
+      "id": 2
+    }
+  ],
+  "list": [
+    {
+      "todo": "m1",
+      "isChecked": false,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "todo": "m2",
+      "isChecked": false,
+      "userId": 1,
       "id": 2
     },
     {
-      "todo": "h",
+      "todo": "m3",
+      "isChecked": false,
+      "userId": 1,
       "id": 3
     },
     {
-      "todo": "e",
+      "todo": "n1",
+      "isChecked": false,
+      "userId": 2,
       "id": 4
+    },
+    {
+      "todo": "n2",
+      "isChecked": false,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "todo": "m4",
+      "isChecked": false,
+      "userId": 1,
+      "id": 6
     }
   ]
 }
