@@ -5,46 +5,74 @@
       "id": 1
     },
     {
-      "user": "n",
+      "user": "е",
       "id": 2
+    },
+    {
+      "user": "e",
+      "id": 3
+    },
+    {
+      "user": "tr",
+      "id": 4
+    },
+    {
+      "user": "t",
+      "id": 5
+    },
+    {
+      "user": "q",
+      "id": 6
     }
   ],
   "list": [
     {
-      "todo": "m1",
+      "todo": "индекс1",
       "isChecked": false,
       "userId": 1,
       "id": 1
     },
     {
-      "todo": "m2",
+      "todo": "ывлаор",
       "isChecked": false,
       "userId": 1,
       "id": 2
     },
     {
-      "todo": "m3",
-      "isChecked": false,
-      "userId": 1,
+      "todo": "акупить молока",
+      "isChecked": true,
+      "userId": 2,
       "id": 3
     },
     {
-      "todo": "n1",
+      "todo": "чапмчс",
       "isChecked": false,
       "userId": 2,
       "id": 4
     },
     {
-      "todo": "n2",
+      "todo": "dfg",
       "isChecked": false,
-      "userId": 2,
+      "userId": 5,
       "id": 5
     },
     {
-      "todo": "m4",
-      "isChecked": false,
-      "userId": 1,
+      "todo": "xb",
+      "isChecked": true,
+      "userId": 6,
       "id": 6
+    },
+    {
+      "todo": "dfbdbf",
+      "isChecked": true,
+      "userId": 6,
+      "id": 7
+    },
+    {
+      "todo": "dbcfbv",
+      "isChecked": false,
+      "userId": 6,
+      "id": 8
     }
   ]
 }

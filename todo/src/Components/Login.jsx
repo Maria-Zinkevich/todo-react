@@ -12,6 +12,8 @@ export const Login = ({ setUser, setUserId }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLogin(e.target.value);
+    setLogin("");
+
     let user;
     const usersList = await getUsersList(login);
 

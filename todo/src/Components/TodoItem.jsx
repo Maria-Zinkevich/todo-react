@@ -8,12 +8,20 @@ import Button from "@material-ui/core/Button";
 import { Checkbox } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 
-export const ListItem = ({ listItem: { todo, isChecked, id }, onUpdate }) => {
+export const ListItem = ({
+  listItem: { todo, isChecked, id, userId },
+  onUpdate,
+}) => {
   const [item, setItem] = useState(todo);
   const [check, setCheck] = useState(isChecked);
 
-  const handleEdit = async (check) => {
-    await updateTodo(id, item, check);
+  const handleEdit = async () => {
+    await updateTodo(id, item, check, userId);
+    onUpdate();
+  };
+
+  const handleCheck = async (check) => {
+    await updateTodo(id, item, check, userId);
     onUpdate();
   };
 
@@ -37,7 +45,7 @@ export const ListItem = ({ listItem: { todo, isChecked, id }, onUpdate }) => {
         inputProps={{ "aria-label": "Checkbox A" }}
         onChange={({ target: { checked } }) => {
           setCheck(checked);
-          handleEdit(checked);
+          handleCheck(checked);
         }}
       />
       <Button
@@ -46,7 +54,7 @@ export const ListItem = ({ listItem: { todo, isChecked, id }, onUpdate }) => {
         variant="contained"
         color="secondary"
       >
-        Save changes
+        Save
       </Button>
       <Button onClick={handleDell} variant="contained" color="primary">
         Dellete

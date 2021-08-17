@@ -8,11 +8,11 @@ export const addTodo = async (todo, isChecked, userId) =>
     body: JSON.stringify({ todo, isChecked, userId }),
   });
 
-export const updateTodo = async (id, todo, isChecked) => {
+export const updateTodo = async (id, todo, isChecked, userId) => {
   await fetch(`${URL}/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ todo, isChecked }),
+    body: JSON.stringify({ todo, isChecked, userId }),
   });
 };
 

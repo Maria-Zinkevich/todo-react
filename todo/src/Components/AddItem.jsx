@@ -8,7 +8,7 @@ import { TextField } from "@material-ui/core";
 
 export const AddItem = ({ updateDetector, userId }) => {
   const [item, setItem] = useState("");
-  const [check, setCheck] = useState(true);
+  const [check, setCheck] = useState(false);
 
   const handleAdd = async (e) => {
     e.preventDefault();

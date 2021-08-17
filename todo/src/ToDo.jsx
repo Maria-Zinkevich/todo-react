@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { AddItem } from "./Components/AddItem";
-import { TodoList } from "./Components/TodoList";
-import { Login } from "./Components/Login";
-import { Header } from "./Components/Header";
 import { getTodosByUser } from "./Requests";
+import { Login } from "./Components/Login";
+import { UserInfo } from "./Components/UserInfo";
 
 export const ToDo = () => {
   const [list, setList] = useState([]);
@@ -24,17 +22,16 @@ export const ToDo = () => {
     setDetector({});
   };
 
-  return (
-    <>
-      {user === null ? (
-        <Login setUser={setUser} setUserId={setUserId} />
-      ) : (
-        <>
-          <Header user={user} />
-          <AddItem updateDetector={updateDetector} userId={userId} />
-          <TodoList list={list} onUpdate={updateDetector} />
-        </>
-      )}
-    </>
+  return user === null ? (
+    <Login setUser={setUser} setUserId={setUserId} />
+  ) : (
+    <UserInfo
+      user={user}
+      setUser={setUser}
+      updateDetector={updateDetector}
+      userId={userId}
+      list={list}
+      onUpdate={updateDetector}
+    />
   );
 };
