@@ -45,3 +45,10 @@ export const getTodosByUser = async (userId) => {
   const response = await fetch(`${URL}/?userId=${userId}`);
   return await response.json();
 };
+
+export const getTodosByStatus = async (isChecked, userId) => {
+  const response = await fetch(
+    `${URL}/?isChecked=${isChecked}&userId=${userId}`
+  );
+  return await response.json();
+};

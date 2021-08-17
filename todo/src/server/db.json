@@ -3,76 +3,32 @@
     {
       "user": "m",
       "id": 1
-    },
-    {
-      "user": "е",
-      "id": 2
-    },
-    {
-      "user": "e",
-      "id": 3
-    },
-    {
-      "user": "tr",
-      "id": 4
-    },
-    {
-      "user": "t",
-      "id": 5
-    },
-    {
-      "user": "q",
-      "id": 6
     }
   ],
   "list": [
     {
-      "todo": "индекс1",
-      "isChecked": false,
+      "todo": "a",
+      "isChecked": true,
       "userId": 1,
       "id": 1
     },
     {
-      "todo": "ывлаор",
-      "isChecked": false,
+      "todo": "b",
+      "isChecked": true,
       "userId": 1,
       "id": 2
     },
     {
-      "todo": "акупить молока",
-      "isChecked": true,
-      "userId": 2,
+      "todo": "c",
+      "isChecked": false,
+      "userId": 1,
       "id": 3
     },
     {
-      "todo": "чапмчс",
+      "todo": "d",
       "isChecked": false,
-      "userId": 2,
+      "userId": 1,
       "id": 4
-    },
-    {
-      "todo": "dfg",
-      "isChecked": false,
-      "userId": 5,
-      "id": 5
-    },
-    {
-      "todo": "xb",
-      "isChecked": true,
-      "userId": 6,
-      "id": 6
-    },
-    {
-      "todo": "dfbdbf",
-      "isChecked": true,
-      "userId": 6,
-      "id": 7
-    },
-    {
-      "todo": "dbcfbv",
-      "isChecked": false,
-      "userId": 6,
-      "id": 8
     }
   ]
 }
