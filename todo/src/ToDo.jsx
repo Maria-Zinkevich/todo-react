@@ -13,7 +13,7 @@ export const ToDo = () => {
   useEffect(() => {
     const updateList = async () => {
       let todos;
-      if (null === filter) {
+      if (null === filter || filter === "null") {
         todos = user && (await getTodosByUser(userId));
         setList(todos);
       } else {
