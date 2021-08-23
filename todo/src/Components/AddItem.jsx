@@ -6,35 +6,41 @@ import styles from "./addItem.module.css";
 import { Button } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 
+let textInput = createRef();
+
+function initState({ userId }) {
+    return {
+      item: "",
+      userId,
+      check: false,
+    };
+}
+
+async function reducer(state, action) {
+    if (action.item !== "") {
+      await addTodo(action.item, state.check, state.userId);
+      action.updateDetector();
+      action.setItem(action.item);
+    }
+  }
+
 export const AddItem = ({ updateDetector, userId }) => {
   const [item, setItem] = useState("");
   const [check, setCheck] = useState(false);
-
-  const handleAdd = async (e) => {
-    e.preventDefault();
-    if (item !== "") {
-      await addTodo(item, check, userId);
-      updateDetector();
-      setItem("");
-    }
-  };
-
-  const handleInput = (event) => {
-    setItem(event.target.value);
-    setCheck(false);
-  };
+  const [state, dispatch] = useReducer(reducer, { userId }, initState);
 
   return (
-    <form onSubmit={handleAdd} id="form" className={`${styles.form}`}>
+    <form onSubmit={() => dispatch({ item, updateDetector, setItem })} id="form" className={`${styles.form}`}>
       <TextField
+        ref={textInput}
         label="What should be done?"
         variant="outlined"
         value={item}
-        onChange={handleInput}
+        onChange={(event) => setItem(event.target.value)}
       />
       <Button
         type="submit"
-        onClick={handleAdd}
+        onClick={() => dispatch({ item, updateDetector, setItem })}
         variant="contained"
         color="primary"
       >
