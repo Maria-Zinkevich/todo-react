@@ -3,6 +3,10 @@
     {
       "user": "m",
       "id": 1
+    },
+    {
+      "user": "k",
+      "id": 2
     }
   ],
   "list": [
@@ -20,7 +24,7 @@
     },
     {
       "todo": "c",
-      "isChecked": false,
+      "isChecked": true,
       "userId": 1,
       "id": 3
     },
@@ -29,6 +33,30 @@
       "isChecked": false,
       "userId": 1,
       "id": 4
+    },
+    {
+      "todo": "e",
+      "isChecked": true,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "todo": "a",
+      "isChecked": false,
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "todo": "b",
+      "isChecked": false,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "todo": "c",
+      "isChecked": false,
+      "userId": 2,
+      "id": 8
     }
   ]
 }
